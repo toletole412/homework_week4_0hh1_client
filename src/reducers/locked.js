@@ -1,3 +1,12 @@
-export default function( state = [], { type, payload } = {}) {
-  return state
+
+import { CREATE_GAME } from '../actions/types'
+
+export default (state = [], { type, payload } = {}) => {
+  switch (type) {
+    case CREATE_GAME :
+      return [].concat(payload.locked)
+
+    default:
+      return state
+  }
 }
