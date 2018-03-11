@@ -1,3 +1,3 @@
-export default function(state = "open", { type, payload } = {}) {
+export default function(state = { open: true }, { type, payload } = {}) {
   return state
 }
